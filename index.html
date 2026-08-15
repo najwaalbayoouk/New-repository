@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نجوى عبدالله البيوك | مصممة ومطوّرة وسائط متعددة</title>
+<meta name="description" content="بورتفوليو شخصي لمصممة ومطوّرة وسائط متعددة، متخصصة في الويب والموبايل">
+
+<!-- خطوط -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== خلفية 3D (Three.js particles) ===== -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ===== شريط التنقل ===== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo">N<span>.</span>A</a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">من أنا</a>
+      <a href="#services">خدماتي</a>
+      <a href="#work">أعمالي</a>
+      <a href="#contact">تواصل معي</a>
+    </nav>
+
+    <a href="#contact" class="nav__cta">لنعمل سوياً</a>
+
+    <button class="nav__burger" id="burger" aria-label="فتح القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== الهيرو ===== -->
+<section class="hero" id="home">
+  <div class="hero__glow"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow" data-reveal>متاحة لمشاريع جديدة — 2026</p>
+    <h1 class="hero__title" data-reveal>
+      <span class="hero__title-line">أصمّم تجارب رقمية</span>
+      <span class="hero__title-line hero__title-accent">تُروى بصرياً<span class="dot">.</span></span>
+    </h1>
+    <p class="hero__desc" data-reveal>
+      نجوى عبدالله البيوك — مصممة ومطوّرة وسائط متعددة، أدمج بين الحركة والتصميم والبرمجة
+      لأبني مواقع ويب وتطبيقات موبايل لا تُنسى.
+    </p>
+    <div class="hero__actions" data-reveal>
+      <a href="#work" class="btn btn--primary">شاهدي أعمالي</a>
+      <a href="#contact" class="btn btn--ghost">تواصلي معي</a>
+    </div>
+  </div>
+
+  <div class="hero__card" id="heroCard">
+    <div class="hero__card-face">
+      <span class="hero__card-tag">UI/UX</span>
+      <span class="hero__card-tag">Motion</span>
+      <span class="hero__card-tag">Web</span>
+      <span class="hero__card-tag">Mobile</span>
+      <div class="hero__card-core"></div>
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    <span>مرري للأسفل</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== شريط الكلمات المتحركة ===== -->
+<div class="marquee">
+  <div class="marquee__track">
+    <span>تصميم واجهات</span><span>•</span>
+    <span>تطوير مواقع</span><span>•</span>
+    <span>تطبيقات موبايل</span><span>•</span>
+    <span>موشن جرافيك</span><span>•</span>
+    <span>هوية بصرية</span><span>•</span>
+    <span>تصميم واجهات</span><span>•</span>
+    <span>تطوير مواقع</span><span>•</span>
+    <span>تطبيقات موبايل</span><span>•</span>
+    <span>موشن جرافيك</span><span>•</span>
+    <span>هوية بصرية</span><span>•</span>
+  </div>
+</div>
+
+<!-- ===== من أنا ===== -->
+<section class="about" id="about">
+  <div class="section-inner about__grid">
+    <div class="about__label" data-reveal>
+      <span class="section-eyebrow">01 — من أنا</span>
+    </div>
+
+    <div class="about__text" data-reveal>
+      <p class="about__lead">
+        بخبرة تمتد لأكثر من ٥ سنوات، أساعد العلامات والشركات الناشئة على تحويل أفكارها
+        إلى تجارب رقمية متكاملة — من أول رسمة على الورق حتى إطلاق المنتج على المتجرين.
+      </p>
+      <p class="about__body">
+        عملي يجمع بين دقة التصميم وصلابة الكود؛ فأنا لا أصمم فقط شاشات جميلة، بل أبنيها
+        بنفسي لتعمل بسلاسة على الويب والموبايل معاً. أؤمن أن التفاصيل الصغيرة —
+        حركة زر، انتقال بين صفحتين، إيقاع الألوان — هي ما يصنع الفرق بين موقع عادي
+        وتجربة يتذكرها المستخدم.
+      </p>
+
+      <div class="about__stats">
+        <div class="stat">
+          <span class="stat__num" data-count="65">0</span>
+          <span class="stat__label">مشروع مُنجز</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="30">0</span>
+          <span class="stat__label">عميل سعيد</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="5">0</span>
+          <span class="stat__label">سنوات خبرة</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== خدماتي ===== -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <span class="section-eyebrow" data-reveal>02 — خدماتي</span>
+    <h2 class="section-title" data-reveal>كل ما تحتاجينه لإطلاق فكرتك</h2>
+
+    <div class="services__grid">
+      <article class="s-card tilt" data-reveal>
+        <div class="s-card__icon">◈</div>
+        <h3>تصميم واجهات UI/UX</h3>
+        <p>تصاميم واضحة وجذابة، مبنية على تجربة مستخدم مدروسة من أول تفاعل.</p>
+      </article>
+
+      <article class="s-card tilt" data-reveal>
+        <div class="s-card__icon">◆</div>
+        <h3>تطوير مواقع الويب</h3>
+        <p>مواقع سريعة، متجاوبة، وبأحدث المعايير التقنية من الواجهة حتى الخلفية.</p>
+      </article>
+
+      <article class="s-card tilt" data-reveal>
+        <div class="s-card__icon">▲</div>
+        <h3>تطبيقات الموبايل</h3>
+        <p>تطبيقات iOS وAndroid بأداء عالٍ وتجربة استخدام سلسة ومتقنة.</p>
+      </article>
+
+      <article class="s-card tilt" data-reveal>
+        <div class="s-card__icon">●</div>
+        <h3>موشن ومحتوى مرئي</h3>
+        <p>رسوم متحركة وفيديوهات قصيرة تعزز هوية العلامة وتزيد من تفاعل الجمهور.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== أعمالي ===== -->
+<section class="work" id="work">
+  <div class="section-inner">
+    <span class="section-eyebrow" data-reveal>03 — أعمالي</span>
+    <h2 class="section-title" data-reveal>مشاريع مختارة</h2>
+
+    <div class="work__filters" data-reveal>
+      <button class="filter active" data-filter="all">الكل</button>
+      <button class="filter" data-filter="web">ويب</button>
+      <button class="filter" data-filter="mobile">موبايل</button>
+      <button class="filter" data-filter="motion">موشن</button>
+    </div>
+
+    <div class="work__grid">
+      <article class="w-card tilt" data-cat="web" data-reveal>
+        <div class="w-card__media w-card__media--1"></div>
+        <div class="w-card__info">
+          <h3>منصة نورا للتجارة الإلكترونية</h3>
+          <p>Web · UI/UX</p>
+        </div>
+      </article>
+
+      <article class="w-card tilt" data-cat="mobile" data-reveal>
+        <div class="w-card__media w-card__media--2"></div>
+        <div class="w-card__info">
+          <h3>تطبيق لمّة — توصيل طلبات</h3>
+          <p>Mobile App</p>
+        </div>
+      </article>
+
+      <article class="w-card tilt" data-cat="motion" data-reveal>
+        <div class="w-card__media w-card__media--3"></div>
+        <div class="w-card__info">
+          <h3>هوية بصرية متحركة لعلامة قهوة</h3>
+          <p>Motion · Branding</p>
+        </div>
+      </article>
+
+      <article class="w-card tilt" data-cat="web" data-reveal>
+        <div class="w-card__media w-card__media--4"></div>
+        <div class="w-card__info">
+          <h3>موقع استوديو تصوير احترافي</h3>
+          <p>Web · Portfolio</p>
+        </div>
+      </article>
+
+      <article class="w-card tilt" data-cat="mobile" data-reveal>
+        <div class="w-card__media w-card__media--5"></div>
+        <div class="w-card__info">
+          <h3>تطبيق تتبع اللياقة البدنية</h3>
+          <p>Mobile App</p>
+        </div>
+      </article>
+
+      <article class="w-card tilt" data-cat="motion" data-reveal>
+        <div class="w-card__media w-card__media--6"></div>
+        <div class="w-card__info">
+          <h3>إعلان تشويقي لإطلاق منتج</h3>
+          <p>Motion · Video</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== تواصل معي ===== -->
+<section class="contact" id="contact">
+  <div class="section-inner contact__grid">
+    <div class="contact__left" data-reveal>
+      <span class="section-eyebrow">04 — تواصل معي</span>
+      <h2 class="section-title">لنحوّل فكرتك<br>إلى واقع رقمي</h2>
+      <p class="contact__desc">
+        سواء كان لديك مشروع جاهز أو مجرد فكرة أولية، أنا هنا للاستماع والمساعدة.
+      </p>
+
+      <div class="contact__info">
+        <a href="mailto:n421345646@gmail.com" class="contact__item">
+          <span class="contact__item-label">البريد الإلكتروني</span>
+          <span class="contact__item-value" dir="ltr">n421345646@gmail.com</span>
+        </a>
+        <a href="https://instagram.com/najwaalbayoouk" target="_blank" rel="noopener" class="contact__item">
+          <span class="contact__item-label">انستغرام</span>
+          <span class="contact__item-value" dir="ltr">@najwaalbayoouk</span>
+        </a>
+      </div>
+
+      <div class="contact__socials">
+        <a href="https://instagram.com/najwaalbayoouk" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+
+    <form class="contact__form" id="contactForm" data-reveal>
+      <div class="field">
+        <input type="text" id="name" name="name" required>
+        <label for="name">الاسم الكامل</label>
+      </div>
+      <div class="field">
+        <input type="email" id="email" name="email" required>
+        <label for="email">البريد الإلكتروني</label>
+      </div>
+      <div class="field">
+        <input type="text" id="subject" name="subject">
+        <label for="subject">موضوع الرسالة</label>
+      </div>
+      <div class="field">
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="message">تفاصيل مشروعك</label>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block">
+        <span class="btn__text">إرسال الرسالة</span>
+      </button>
+      <p class="contact__form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== فوتر ===== -->
+<footer class="footer">
+  <div class="section-inner footer__inner">
+    <span>© 2026 نجوى عبدالله البيوك. جميع الحقوق محفوظة.</span>
+    <a href="#home" class="footer__top">↑ العودة للأعلى</a>
+  </div>
+</footer>
+
+<!-- ===== المكتبات + الأكواد ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/128/three.min.js"></script>
+<script src="js/three-bg.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
