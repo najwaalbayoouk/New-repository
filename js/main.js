@@ -93,6 +93,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ============ تكبير صور المشاريع (Lightbox) ============ */
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const mediaBtns = document.querySelectorAll('.w-card__media-btn');
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  mediaBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const img = btn.querySelector('img');
+      openLightbox(btn.dataset.img, img ? img.alt : '');
+    });
+  });
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
   /* ============ نموذج التواصل ============ */
   const form = document.getElementById('contactForm');
   const note = document.getElementById('formNote');

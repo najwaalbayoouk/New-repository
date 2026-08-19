@@ -30,7 +30,7 @@
 }
 
 *,*::before,*::after{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 
 body{
   margin:0;
@@ -40,6 +40,8 @@ body{
   font-weight: 400;
   line-height: 1.7;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -209,6 +211,7 @@ img{ max-width: 100%; display:block; }
   max-width: 1180px;
   margin: 0 auto;
   gap: 40px;
+  overflow: hidden;
 }
 
 .hero__glow{
@@ -216,6 +219,7 @@ img{ max-width: 100%; display:block; }
   top: 10%;
   left: 50%;
   width: 720px;
+  max-width: 150vw;
   height: 720px;
   background: radial-gradient(circle, var(--violet-soft) 0%, transparent 70%);
   transform: translateX(-50%);
@@ -377,6 +381,8 @@ img{ max-width: 100%; display:block; }
   position: relative;
   z-index: 1;
   overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
   border-top: 1px solid var(--surface-line);
   border-bottom: 1px solid var(--surface-line);
   padding: 22px 0;
@@ -516,16 +522,67 @@ img{ max-width: 100%; display:block; }
 .w-card.is-hidden{ display: none; }
 
 .w-card__media{
-  height: 200px;
-  background-size: cover;
-  background-position: center;
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
   position: relative;
 }
-.w-card__media::after{
-  content:'';
-  position: absolute; inset:0;
-  background: linear-gradient(180deg, transparent 40%, rgba(10,12,19,0.5));
+.w-card__media-btn{
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  cursor: zoom-in;
+  overflow: hidden;
 }
+.w-card__media-btn::after{
+  content:'';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10,12,19,0.5));
+  pointer-events: none;
+}
+.w-card__media--app{
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,#2b3a6b,#7C5CFC);
+  position: relative;
+}
+.w-card__media--figma{
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: linear-gradient(155deg,#1a1a2e,#2d1b4e 60%,#1a1a2e);
+  position: relative;
+  cursor: pointer;
+  transition: background .3s var(--ease);
+}
+.w-card__media--figma:hover{ background: linear-gradient(155deg,#20203a,#3a2260 60%,#20203a); }
+.w-card__figma-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
+}
+.w-card__badge{
+  background: rgba(10,12,19,0.55);
+  border: 1px solid rgba(237,237,242,0.25);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
 .w-card__media--1{ background: linear-gradient(135deg,#3a2b6b,#7C5CFC); }
 .w-card__media--2{ background: linear-gradient(135deg,#2b3a6b,#5c7cfc); }
 .w-card__media--3{ background: linear-gradient(135deg,#6b4b2b,#D4AF37); }
@@ -536,6 +593,47 @@ img{ max-width: 100%; display:block; }
 .w-card__info{ padding: 22px 24px; }
 .w-card__info h3{ font-size: 16px; margin-bottom: 6px; }
 .w-card__info p{ font-size: 13px; color: var(--text-muted); }
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(6,7,12,0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  backdrop-filter: blur(6px);
+}
+.lightbox.is-open{ display: flex; }
+.lightbox__img{
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: var(--radius-s);
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.7);
+}
+.lightbox__close{
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--surface-line);
+  color: var(--text);
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .3s var(--ease);
+}
+.lightbox__close:hover{ background: var(--violet); }
 
 /* ============================================
    CONTACT
